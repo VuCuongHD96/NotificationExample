@@ -1,0 +1,9 @@
+{
+    "aps": {
+        "alert": {
+            "title": "Notification Title",
+            "body": "Notifications body"
+         }
+     },
+    "Simulator Target Bundle": "com.mobio.sdk"
+}
