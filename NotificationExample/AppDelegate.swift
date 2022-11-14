@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerForPushNotifications()
         return true
     }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let token = tokenParts.joined()
+        print("------ deubug ---------- token = ", token)
+    }
 }
 
 extension AppDelegate {
@@ -53,7 +60,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         print("----- debug ----- willPresent")
-        completionHandler([.sound, .alert])
+        completionHandler([.alert, .sound, .badge])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
