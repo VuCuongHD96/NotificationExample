@@ -16,8 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification Example" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pg9-0V-LWB">
+                                <rect key="frame" x="80.666666666666686" y="407" width="229" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="Pg9-0V-LWB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aio-1T-fV8"/>
+                            <constraint firstItem="Pg9-0V-LWB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vtc-Yp-BoF"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
