@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AllowNotificationTutorialViewController" customModule="NotificationExample" customModuleProvider="target">
+            <connections>
+                <outlet property="autoPlaySwitch" destination="GKj-22-U3K" id="Yqr-OJ-mJ5"/>
+                <outlet property="cancelButton" destination="YfG-r9-jJa" id="lxT-5G-flf"/>
+                <outlet property="collectionView" destination="AGW-cH-oce" id="jp8-95-iNh"/>
+                <outlet property="settingButton" destination="4g0-vp-tYu" id="cra-ND-qi4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8K-HY-l9h">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cUn-7R-zJS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mm6-ix-iq2">
+                                <rect key="frame" x="56.5" y="71" width="262.5" height="525"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AGW-cH-oce">
+                                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="400.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v3K-Hd-YkX">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <visualEffectView key="backgroundView" opaque="NO" contentMode="scaleToFill" id="K6G-HT-kWj">
+                                            <rect key="frame" x="0.0" y="0.0" width="262.5" height="400.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="A2o-Gs-3VX">
+                                                <rect key="frame" x="0.0" y="0.0" width="262" height="400"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                            <blurEffect style="regular"/>
+                                        </visualEffectView>
+                                        <cells/>
+                                    </collectionView>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQz-SY-do2">
+                                        <rect key="frame" x="0.0" y="420.5" width="262.5" height="40"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8BY-9T-aEE">
+                                            <rect key="frame" x="0.0" y="0.0" width="262" height="40"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sgr-W7-Amk">
+                                                    <rect key="frame" x="10" y="4.5" width="242.5" height="31"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto play" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcG-Bd-gQ2">
+                                                            <rect key="frame" x="0.0" y="0.0" width="193.5" height="31"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GKj-22-U3K">
+                                                            <rect key="frame" x="193.5" y="0.0" width="51" height="31"/>
+                                                            <color key="onTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <connections>
+                                                                <action selector="autoPlaySwitchAction:" destination="-1" eventType="touchUpInside" id="Soc-0E-4Sa"/>
+                                                            </connections>
+                                                        </switch>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="KFh-o1-AEb"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Sgr-W7-Amk" firstAttribute="centerY" secondItem="8BY-9T-aEE" secondAttribute="centerY" id="6mL-P3-euX"/>
+                                            </constraints>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Sgr-W7-Amk" secondAttribute="trailing" constant="10" id="1Rc-3s-9Qn"/>
+                                            <constraint firstAttribute="height" constant="40" id="b9B-53-yYe"/>
+                                            <constraint firstItem="Sgr-W7-Amk" firstAttribute="leading" secondItem="XQz-SY-do2" secondAttribute="leading" constant="10" id="y3l-oa-gSN"/>
+                                        </constraints>
+                                        <blurEffect style="dark"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </visualEffectView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eTI-GT-aba">
+                                        <rect key="frame" x="0.0" y="480.5" width="262.5" height="44.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YfG-r9-jJa">
+                                                <rect key="frame" x="0.0" y="0.0" width="121" height="44.5"/>
+                                                <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="cancelAction:" destination="-1" eventType="touchUpInside" id="b3V-I2-t2P"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g0-vp-tYu">
+                                                <rect key="frame" x="141" y="0.0" width="121.5" height="44.5"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Setting">
+                                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="settingAction:" destination="-1" eventType="touchUpInside" id="Jdr-4H-LhQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44.5" id="WxJ-ey-sjc"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Mm6-ix-iq2" firstAttribute="centerX" secondItem="cUn-7R-zJS" secondAttribute="centerX" id="MDM-Uc-EJm"/>
+                            <constraint firstItem="Mm6-ix-iq2" firstAttribute="centerY" secondItem="cUn-7R-zJS" secondAttribute="centerY" id="Oa2-S1-xQ6"/>
+                            <constraint firstItem="AGW-cH-oce" firstAttribute="height" secondItem="cUn-7R-zJS" secondAttribute="height" multiplier="0.6" id="Yrj-ZI-scb"/>
+                            <constraint firstItem="Mm6-ix-iq2" firstAttribute="width" secondItem="cUn-7R-zJS" secondAttribute="width" multiplier="7/10" id="zzE-2M-Ccm"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="i8K-HY-l9h" secondAttribute="trailing" id="H88-5i-av4"/>
+                <constraint firstItem="i8K-HY-l9h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Zc1-to-W20"/>
+                <constraint firstItem="i8K-HY-l9h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="k1H-IY-eyT"/>
+                <constraint firstAttribute="bottom" secondItem="i8K-HY-l9h" secondAttribute="bottom" id="q7w-8n-U3E"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="100"/>
+        </view>
+    </objects>
+</document>

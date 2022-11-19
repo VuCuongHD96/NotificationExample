@@ -40,6 +40,9 @@ extension AppDelegate {
             DispatchQueue.main.async {
                 UIApplication.shared.registerForRemoteNotifications()
             }
+        } else {
+            let allowNotificationViewModel = AllowNotificationTutorialViewModel()
+            allowNotificationViewModel.showTutorial()
         }
     }
 }
