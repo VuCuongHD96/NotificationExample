@@ -1,0 +1,20 @@
+name: NotificationExample
+options:
+  createIntermediateGroups: true
+  indentWidth: 2
+  tabWidth: 2
+targets: # The List of our targets
+  NotificationExample:
+    type: application
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources:
+      #Sources
+      - path: NotificationExample
+  NotificationService:
+    type: extensionkit-extension
+    platform: iOS
+    deploymentTarget: "13.0"
+    sources:
+      #Sources
+      - path: NotificationService
