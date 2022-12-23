@@ -11,13 +11,20 @@ import UserNotificationsUI
 
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
     
-    @IBOutlet var label: UILabel?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        preferredContentSize.height = .infinity
     }
     
-    func didReceive(_ notification: UNNotification) {
-        label?.text = notification.request.content.body
+     func didReceive(_ notification: UNNotification) {
+        let viewController = BigPictureViewController.instantiate()
+//         if let subview = viewController.view {
+//             subview.frame = view.frame
+//             view.addSubview(subview)
+//         }
+         addChild(viewController)
+         viewController.view.frame = view.bounds
+         view.addSubview(viewController.view)
+         didMove(toParent: self)
     }
 }
