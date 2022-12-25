@@ -9,15 +9,29 @@ import UIKit
 import UserNotifications
 import UserNotificationsUI
 
-class NotificationViewController: UIViewController, UNNotificationContentExtension {
+final class NotificationViewController: UIViewController, UNNotificationContentExtension {
     
-    @IBOutlet var label: UILabel?
-    
+    // MARK: - Property
+    var viewController: (any NotificationContentViewControllerType)!
+
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    // MARK: - Notification
     func didReceive(_ notification: UNNotification) {
-        label?.text = notification.request.content.body
+        guard let remoteNotification = JSONManager.decode(RemoteNotification.self, from: notification.request.content.userInfo) else {
+            return
+        }
+        let aps = remoteNotification.aps
+        let notificationContentData = aps.notificationContentData
+        if let bigPictureData = notificationContentData.bigPicture {
+            let bigPictureViewController = BigPictureViewController.instantiate()
+            bigPictureViewController.notificationContentData = bigPictureData
+            viewController = bigPictureViewController
+        }
+        viewController.view.frame = view.bounds
+        view.addSubview(viewController.view)
     }
 }
